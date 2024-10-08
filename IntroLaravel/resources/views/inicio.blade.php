@@ -20,7 +20,6 @@
         <h1 class="display-1">Bienvenido Turista!</h1>
         <p>Presione para inciar......</p>
         <a href="{{ route('formulario') }}" class="btn btn-primary">Ir al Registro</a>
-    
     </div>
 </body>
 </html>
