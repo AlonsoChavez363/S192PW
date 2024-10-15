@@ -9,6 +9,9 @@ Route::get('/form', [controladorVistas::class, 'formulario'])->name ("formulario
 Route::get('/client', [controladorVistas::class, 'consulta'])->name ("clientes");
 Route::view('component', 'componentes') ->name ('componentes');     
 
+Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->name ("rutaEnviar");
+
+
 
 
 

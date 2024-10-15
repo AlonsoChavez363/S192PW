@@ -10,25 +10,28 @@
               </div>
               <div class="card-body text-justify">
                 
-                <form>
+                <form action="/enviarCliente" method="POST">
+
+                  @csrf
+
                   <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre">
+                    <input type="text" class="form-control" name="nombre">
                   </div>
 
                   <div class="mb-3">
                     <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="apellido">
+                    <input type="text" class="form-control" name="apellido">
                   </div>
 
                   <div class="mb-3">
                     <label for="correo" class="form-label">Correo</label>
-                    <input type="text" class="form-control" id="correo">
+                    <input type="text" class="form-control" name="correo">
                   </div>
 
                   <div class="mb-3">
                     <label for="telefono" class="form-label">Telefono</label>
-                    <input type="text" class="form-control" id="telefono">
+                    <input type="text" class="form-control" name="telefono">
                   </div>
 
                   <div class="card-footer text-muted">
