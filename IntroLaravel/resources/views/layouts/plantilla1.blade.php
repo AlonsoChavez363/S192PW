@@ -19,11 +19,11 @@
           <ul class="navbar-nav">
 
             <li class="nav-item active">
-              <a class="nav-link" href="{{route('formulario')}}">Registro de Clientes <span class="sr-only">(current)</span></a>
+              <a class="nav-link {{ request()->routeIs('formulario')?'text-warning': '' }}" href="{{route('formulario')}}">Registro de Clientes <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{route('clientes')}}">Consultar clientes</a>
+              <a class="nav-link {{ request()->routeIs('clientes')?'text-warning': '' }}" href="{{route('clientes')}}">Consultar clientes</a>
             </li>
           </ul>
         </nav>
