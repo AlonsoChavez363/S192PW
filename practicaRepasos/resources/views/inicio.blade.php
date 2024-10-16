@@ -21,6 +21,7 @@
         <p>Alonso Chávez Alegria </p>
         <p>S192 Prgramacin Web</p>
         <p>Correo: 122044170@upq.edu.mx</p>
+        <a href="{{ route('trabajo') }}" class="btn btn-primary">Ir a Repaso 1</a>
     </div>
 </body>
 </html>
