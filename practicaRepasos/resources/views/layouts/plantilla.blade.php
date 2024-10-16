@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/js/app.js']) 
-    <title>Document</title>
+    <title>@yield('titulo')</title>
     <style>
         body, html{
             height: 100%
@@ -16,14 +16,14 @@
     </style>
 </head>
 <body>
-    <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
-        <h1 class="display-1">Practica De Repaso</h1>
-        <p>Alonso Chávez Alegria </p>
-        <p>S192 Prgramacin Web</p>
-        <p>Correo: 122044170@upq.edu.mx</p>
-        <a href="{{ route('trabajo') }}" class="btn btn-primary">Ir a Repaso 1</a>
-    </div>
-
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <a href="{{ route('inicio') }}" class="btn btn-outline-success">Ir al Inicio</a>
+            <a href="{{ route('trabajo') }}" class="btn btn-sm btn-outline-secondary">Ir a Repaso 1</a>
+        </form>
     
+        
+    </nav>
+    @yield('contenido')
 </body>
 </html>
