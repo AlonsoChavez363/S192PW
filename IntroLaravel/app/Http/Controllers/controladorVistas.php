@@ -34,8 +34,22 @@ class controladorVistas extends Controller
         //return $peticion->url();
 
         //para devolver la ip desde donde se hizo la peticion
-        return $peticion->ip();
+        
+        //return $peticion->ip();
+        
+        //respuestas de redireccion
+        //return redirection('/');
 
+        //redireccion usando el nombre de la ruta
+        //return redirect()->route('clientes');        
+
+        //redireccion al origen
+        //return back();
+
+        //redireccion con valores en session
+        $usuario= $peticion->input('nombre');
+        session()->flash('exito', 'se guardo el usuario'.$usuario);
+        return to_route('formulario');
 
     }
 }

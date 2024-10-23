@@ -4,6 +4,15 @@
 
           {{-- inica tarjeta de formulario --}}
           <div class="container mt-5 col-md-6">
+
+            @if (@session('exito'))
+            <x-alert tipo="success"> {{session('exito')}} </x-alert>
+            @endif
+
+            @session ('exito')
+            <x-alert tipo="success"> {{session($value)}} </x-alert>
+            @endsession
+
             <div class="card font-monospace">
               <div class="card-header fs-5 text-center text-primary">
                 Registro Clientes
