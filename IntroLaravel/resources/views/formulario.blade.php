@@ -7,6 +7,11 @@
 
             @if (@session('exito'))
             <x-alert tipo="success"> {{session('exito')}} </x-alert>
+            <script>Swal.fire({
+              title: "Respuesta del servidor",
+              text: '{{ $value }}',
+              icon: "success"
+            });</script>
             @endif
 
             <div class="card font-monospace">
@@ -21,27 +26,27 @@
 
                   <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" name="nombre">
+                    <input type="text" class="form-control" name="nombre" value=" {{ old('nombre') }} ">
                     <small class="fst-italic text-danger">{{ $errors->first('nombre') }}</small>
                   </div>
 
                   <div class="mb-3">
                     <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" name="apellido">
+                    <input type="text" class="form-control" name="apellido" value=" {{ old('apellido') }} ">
                     <small class="fst-italic text-danger">{{ $errors->first('apellido') }}</small>
 
                   </div>
 
                   <div class="mb-3">
                     <label for="correo" class="form-label">Correo</label>
-                    <input type="text" class="form-control" name="correo">
+                    <input type="text" class="form-control" name="correo" value=" {{ old('correo') }} ">
                     <small class="fst-italic text-danger">{{ $errors->first('correo') }}</small>
 
                   </div>
 
                   <div class="mb-3">
                     <label for="telefono" class="form-label">Telefono</label>
-                    <input type="text" class="form-control" name="telefono">
+                    <input type="text" class="form-control" name="telefono" value=" {{ old('telefono') }} ">
                     <small class="fst-italic text-danger">{{ $errors->first('telefono') }}</small>
 
                   </div>
