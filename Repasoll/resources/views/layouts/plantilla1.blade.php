@@ -18,14 +18,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/registro">RegistroLibros <span class="sr-only">(current)</span></a>
+                    <a class="nav-brand" href="{{ route('registro') }}">RegistroLibros <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
 
     @yield('principal')
-    @yield('')
+    @yield('registro')
 
     
     <footer class="bg-dark text-white text-center py-4">

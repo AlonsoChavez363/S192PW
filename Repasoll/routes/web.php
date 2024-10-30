@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'principal') ->name ("principal");
+use App\Http\Controllers\controladorVistas;
 
-Route::view('/registro', 'registro') ->name ('registro');
+
+Route::get('/', [controladorVistas::class, 'home'])->name ("principal");
+Route::get('/reg', [controladorVistas::class, 'registro'])->name ("registro");
+
 

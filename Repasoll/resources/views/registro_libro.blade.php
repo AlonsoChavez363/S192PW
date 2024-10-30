@@ -1,6 +1,6 @@
 @extends('layouts.plantilla1')
-@section('titulo','Principal')
-@section('principal')
+@section('titulo','Registro')
+@section('registro')
 <style>
     body, html{
         height: 100%
@@ -12,7 +12,7 @@
 <body>
 
     <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
-        <h1 class="display-1">Libreria</h1>
+        <h1 class="display-1">Registro</h1>
         <p> Alonso Chávez Alegria </p>
         <p>S192 Prgramacion Web</p>
         <p>Correo: 122044170@upq.edu.mx</p> 
