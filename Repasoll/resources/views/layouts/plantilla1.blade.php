@@ -27,5 +27,14 @@
     @yield('principal')
     @yield('')
 
+    
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>Todos los derechos reservados.</p>
+            <p>Propeidad: Alonso Chávez Alegria</p>  
+            <p>Libros Mamalones</p>
+            <p>Creado el dia 29/10/2024</p>
+        </div>
+    </footer>
 </body>
 </html>
