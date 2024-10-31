@@ -8,15 +8,52 @@
     .full-height{
         height: 100vh;
     }
+    .carousel-inner img{
+      width: 250px;
+      height: 600px;
+      margin: center;
+    }
+    .carousel-caption{
+      background-color: rgba(110, 106, 106, 0.274);
+      height: 50x;
+    }
 </style>
 <body>
 
-    <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
-        <h1 class="display-1">Libreria</h1>
-        <p> Alonso Chávez Alegria </p>
-        <p>S192 Prgramacion Web</p>
-        <p>Correo: 122044170@upq.edu.mx</p> 
+    <center><h1 class="display-1">Libreria Goku</h1></center>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="/img/carrusel1.jpg" alt="Noticia 1">
+          <div class="carousel-caption d-none d-md-block">
+          <h5>Otro libro de Youtubers?</h5>
+          <p>El werever saca su libro a la venta</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/carrusel2.jpg" alt="Notica 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Leer un libro??</h5>
+            <p>El leer un libro hace que nuestro cerebro se encuentre en un mejor estado manteniendolo en un estado constante de trabajo.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/carrusel3.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h4>Lugares asombrosos</h4>
+            <br>
+            <p>El Youtuber LuisitoComunica saca a la venta su libro Lugares Asombrosos en donde nos cuento lo mejor de cada uno de sus viajes al rededor del mundo.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
     </div>
-    
 </body>
 @endsection
