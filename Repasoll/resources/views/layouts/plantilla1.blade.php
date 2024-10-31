@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/js/app.js']) 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -38,6 +39,9 @@
                 </li>
             </ul>
         </div>
+        <div class="collapse navbar-expand-lg"></div>
+        <a class="navbar-brand">Libros Asombrosos</a>
+        
     </nav>
 
     @yield('principal')

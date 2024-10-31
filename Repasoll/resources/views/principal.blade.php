@@ -19,8 +19,12 @@
     }
 </style>
 <body>
+  <br>
+  <br>
 
-    <center><h1 class="display-1">Libreria Goku</h1></center>
+  <h1><center>Libros Asombrosos</center></h1>
+  <br>
+  <br>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -46,6 +50,7 @@
           </div>
         </div>
       </div>
+      <br>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Anterior</span>
