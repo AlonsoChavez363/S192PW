@@ -28,20 +28,21 @@
             <x-alert tipo="success"> {{session('exito')}} </x-alert>
             <script>Swal.fire({
               title: "Todo correcto",
+              text: "{{ session('exito') }}",              
               icon: "success"
             });</script>
             @endif
 
         <div>
             <label for="nombre" class="form-label">ISBN</label>
-            <input type="text" class="form-control" name="isbn">
+            <input type="text" class="form-control" name="isbn" value=" {{ old('isbn') }} ">
             <small class="fst-italic text-danger">{{ $errors->first('isbn') }}</small>
 
         </div>
         <br>
         <div>
             <label for="nombre" class="form-label">Nombre del libro</label>
-            <input type="text" class="form-control" name="nombre">
+            <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}">
             <small class="fst-italic text-danger">{{ $errors->first('nombre') }}</small>
 
         </div>
@@ -49,14 +50,14 @@
 
         <div>
             <label for="nombre" class="form-label">Nombre del autor</label>
-            <input type="text" class="form-control" name="autor">
+            <input type="text" class="form-control" name="autor" value=" {{ old('autor') }} ">
             <small class="fst-italic text-danger">{{ $errors->first('autor') }}</small>
         </div>
         <br>
 
         <div>
             <label for="nombre" class="form-label">Paginas totales</label>
-            <input type="text" class="form-control" name="paginas">
+            <input type="text" class="form-control" name="paginas" value=" {{ old('paginas') }} ">
             <small class="fst-italic text-danger">{{ $errors->first('paginas') }}</small>
 
         </div>
@@ -64,7 +65,7 @@
 
         <div>
             <label for="nombre" class="form-label">Año de publicacion</label>
-            <input type="text" class="form-control" name="añoP">
+            <input type="text" class="form-control" name="añoP" value=" {{ old('añoP') }} ">
             <small class="fst-italic text-danger">{{ $errors->first('añoP') }}</small>
 
         </div>
@@ -72,15 +73,15 @@
 
         <div>
             <label for="nombre" class="form-label">Nombre de la editorial</label>
-            <input type="text" class="form-control" name="editorial">
+            <input type="text" class="form-control" name="editorial" value=" {{ old('editorial') }} ">
             <small class="fst-italic text-danger">{{ $errors->first('editorial') }}</small>
 
         </div>
         <br>
-        
+
         <div>
             <label for="nombre" class="form-label">Correo</label>
-            <input type="text" class="form-control" name="correo">
+            <input type="text" class="form-control" name="correo" value=" {{ old('correo') }} ">
             <small class="fst-italic text-danger">{{ $errors->first('correo') }}</small>
 
         </div>

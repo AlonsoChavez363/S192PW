@@ -20,7 +20,7 @@ class controladorVistas extends Controller
     public function procesarLibro(validadorLibros $peticionValidada){
 
         $libro= $peticionValidada->input('nombre');
-        session()->flash('exito', 'se guardo el usuario'.$libro);
+        session()->flash('exito', 'se guardo el libro:'.$libro);
         return to_route('registro');
     
     }

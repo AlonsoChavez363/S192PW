@@ -22,13 +22,13 @@ class validadorLibros extends FormRequest
     public function rules(): array
     {
         return [
-            'isbn'=>'required|numeric|min:13',
-            'nombre'=>'required|string|min:10|max:150',
+            'isbn'=>'required|numeric|min_digits:13',
+            'nombre'=>'required|string|max:150',
             'paginas'=>'required|integer|min:1',
             'añoP'=>'required|integer|digits:4|min:1000|max:2024',
             'correo'=>'required|email:rfc,dns',
-            'autor'=>'required|min:30|max:150',
-            'editorial'=>'required|min:30|max:60'
+            'autor'=>'required|min:5|max:150',
+            'editorial'=>'required|min:5|max:60'
             
 
         ];
