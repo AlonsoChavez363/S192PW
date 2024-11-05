@@ -11,7 +11,7 @@ class Alertas extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class Alertas extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'correo'=>'required',
+            'contrasena'=>'required',
+            'edad'=>'required|numeric'
         ];
     }
 }

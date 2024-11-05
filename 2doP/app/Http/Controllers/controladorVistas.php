@@ -1,21 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\Alertas;
+
 
 use Illuminate\Http\Request;
 
 class controladorVistas extends Controller
 {
-    public function usuarios(){
+    public function Rusuarios(){
         return view('formUsuarios');
     }
 
+    public function procesarUsuario(Alertas $peticionValidada){
 
-    public function FormRequest(request $peticion){
-        $validated = $peticion->validate([
-            'correo'=>'required',
-            'edad'=>'required|numeric',
-            'contrasena'=>'required'
-        ]);
+        $usuario= $peticionValidada->input('correo');
+        session()->flash('exito', 'se guardo el libro:'.$usuario    );
+        return to_route('usuarios');
+    
     }
 }

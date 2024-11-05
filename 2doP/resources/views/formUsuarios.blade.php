@@ -6,46 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Usuarios</title>
     @vite(['resources/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
 
     <h1 class="text-center text-primary mt-5 mb-4">Registro de usuarios</h1>
 
     <div class="container  col-md-4">
 
-    <form>
+    <form action="/enviarUsuario" method="POST">
+        @csrf
+        @if (@session('exito'))
         <x-alert tipo="success"> {{session('exito')}} </x-alert>
         <script>Swal.fire({
           title: "Todo correcto",
-          text: "{{ session('exito') }}",              
           icon: "success"
-        });</script>
+        });
+        </script>
         @endif
 
         <div class="mb-3">
             <label  class="form-label">Correo: </label>
-            <input type="text" class="form-control" nombre="correo" value="{{ old('correo')}}">
+            <input type="text" class="form-control" name="correo" value="{{ old('correo')}}">
             <small class="fst-italic text-danger">{{ $errors->first('correo') }}</small>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Contraseña: </label>
-            <input type="text" class="form-control" nombre="contrasena"value="{{old('contrasena')}}" >
+            <input type="text" class="form-control" name="contrasena"value="{{old('contrasena')}}" >
             <small class="fst-italic text-danger">{{ $errors->first('contrasena') }}</small>
 
         </div>                
 
         <div class="mb-3">
             <label  class="form-label">Edad: </label>
-            <input type="text" class="form-control" nombre="edad" value="{{old('edad')}}">
+            <input type="text" class="form-control" name="edad" value="{{old('edad')}}">
             <small class="fst-italic text-danger">{{ $errors->first('edad') }}</small>
 
         </div>
 
 
-        <div class="boton">
-            <button type="submit" class="btn btn-danger btn-sm ">Guardar Usuario</button>
-        </div>
+        <button type="submit" class="btn btn-success btn-sm">Guardar </button>
 
 
 </div>
