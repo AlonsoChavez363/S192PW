@@ -17,7 +17,14 @@
     <h1 class="text-center text-primary mt-5 mb-4">Registro de usuarios</h1>
 
     <div class="container  col-md-4">
-
+        @if (@session('exito'))
+        <x-alert tipo="success"> {{session('exito')}} </x-alert>
+        <script>Swal.fire({
+          title: "Todo correcto",
+          icon: "success"
+        });
+        </script>
+        @endif
     <form action="/enviarUsuario" method="POST">
         @csrf
         @if (@session('exito'))
@@ -28,29 +35,32 @@
         });
         </script>
         @endif
+       
 
         <div class="mb-3">
-            <label  class="form-label">Correo: </label>
+            <label for="correo"  class="form-label">Correo: </label>
             <input type="text" class="form-control" name="correo" value="{{ old('correo')}}">
             <small class="fst-italic text-danger">{{ $errors->first('correo') }}</small>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Contraseña: </label>
+            <label for="contrasena" class="form-label">Contraseña: </label>
             <input type="text" class="form-control" name="contrasena"value="{{old('contrasena')}}" >
             <small class="fst-italic text-danger">{{ $errors->first('contrasena') }}</small>
 
         </div>                
 
         <div class="mb-3">
-            <label  class="form-label">Edad: </label>
+            <label for="edad" class="form-label">Edad: </label>
             <input type="text" class="form-control" name="edad" value="{{old('edad')}}">
             <small class="fst-italic text-danger">{{ $errors->first('edad') }}</small>
 
         </div>
 
-
-        <button type="submit" class="btn btn-success btn-sm">Guardar </button>
+        <div class="boton">
+            <button type="submit" class="btn btn-success btn-sm">Guardar </button>
+        </div>
+    </form>
 
 
 </div>
