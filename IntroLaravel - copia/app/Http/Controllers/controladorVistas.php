@@ -11,11 +11,10 @@ class controladorVistas extends Controller
 
     }
 
-/*     public function formulario(){
+    public function formulario(){
         return view('formulario');
         
-    } */
-
+    }
 
     public function consulta(){
         return view('clientes');

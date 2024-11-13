@@ -3,12 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\controladorVistas;
-use App\Http\Controllers\clienteController;
-
-
-//controlador vistas
 
 Route::get('/inicio', [controladorVistas::class, 'home'])->name ("inicio");
+Route::get('/form', [controladorVistas::class, 'formulario'])->name ("formulario");
 Route::get('/client', [controladorVistas::class, 'consulta'])->name ("clientes");
 Route::view('component', 'componentes') ->name ('componentes');     
 
@@ -16,11 +13,7 @@ Route::post('/enviarCliente', [controladorVistas::class, 'procesarCliente'])->na
 
 
 
-//controlador cliente
 
-Route::get('/cliente/create', [clienteController::class, 'create'])->name ("formulario");
-
-Route::post('/cliente',[clienteController::class, 'store'])->name('enviarCliente');
 
 
 

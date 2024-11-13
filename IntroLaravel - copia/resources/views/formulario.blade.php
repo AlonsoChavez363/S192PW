@@ -9,6 +9,7 @@
             <x-alert tipo="success"> {{session('exito')}} </x-alert>
             <script>Swal.fire({
               title: "Respuesta del servidor",
+              text: '{{ $value }}',
               icon: "success"
             });</script>
             @endif
@@ -19,7 +20,7 @@
               </div>
               <div class="card-body text-justify">
                 
-                <form action="{{ route('enviarCliente') }}" method="POST">
+                <form action="/enviarCliente" method="POST">
 
                   @csrf
 
