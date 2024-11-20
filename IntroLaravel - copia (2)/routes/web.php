@@ -6,17 +6,13 @@ use App\Http\Controllers\clientesController;
 
 // Rutas del controlador de vistas
 Route::get('/inicio', [controladorVistas::class, 'home'])->name("inicio");
-Route::get('/cliente', [controladorVistas::class, 'consulta'])->name("clientes");
+Route::get('/client', [controladorVistas::class, 'consulta'])->name("clientes");
 Route::view('/component', 'componentes')->name('componentes');
-
-
 
 // Rutas del controlador de clientes
 Route::get('/cliente/create', [clientesController::class, 'create'])->name("formulario");
 Route::post('/enviarCliente', [clientesController::class, 'store'])->name("enviarCliente"); 
 Route::get('/clientes', [clientesController::class, 'index'])->name('listarClientes'); 
-Route::get('/clientes/{}id/edit', [clientesController::class, 'edit'])->name("clientesEdit");
-
 
 
 

@@ -25,7 +25,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link {{ request()->routeIs('clientes')?'text-warning': '' }}" href="{{route('listarClientes')}}">{{__('Consultar Clientes')}}</a>
+              <a class="nav-link {{ request()->routeIs('clientes')?'text-warning': '' }}" href="{{route('clientes')}}">{{__('Consultar Clientes')}}</a>
             </li>
           </ul>
         </nav>

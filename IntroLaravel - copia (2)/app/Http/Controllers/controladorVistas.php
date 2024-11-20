@@ -15,9 +15,7 @@ class controladorVistas extends Controller
         return view('formulario');
         
     } */
-    public function clientEdit(){
-        return view('formulario_edit');
-    }
+
 
     public function consulta(){
         return view('clientes');
