@@ -15,7 +15,11 @@ Route::view('/component', 'componentes')->name('componentes');
 Route::get('/cliente/create', [clientesController::class, 'create'])->name("formulario");
 Route::post('/enviarCliente', [clientesController::class, 'store'])->name("enviarCliente"); 
 Route::get('/clientes', [clientesController::class, 'index'])->name('listarClientes'); 
-Route::get('/clientes/{}id/edit', [clientesController::class, 'edit'])->name("clientesEdit");
+
+//rutas para update y delete
+Route::get('/clientes/edit', [clientesController::class, 'edit'])->name("clientesEdit");
+Route::put('/clientes/{id}', [clientesController::class, 'update'])->name('cliente.update');
+Route::delete('/clientes/{id}', [clientesController::class, 'destroy'])->name('clientesDeleate');
 
 
 

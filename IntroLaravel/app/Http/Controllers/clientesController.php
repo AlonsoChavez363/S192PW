@@ -57,19 +57,27 @@ class clientesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit()
     {
-        $cliente = DB::table('clientes')->where('id',$id)->first();
-
-        return view('formulario_edit',compact('cliente'));
+        return view('formulario_edit');
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorClientes $request, $id)
     {
-        //
+        DB::table('clientes')->where('id',$id)->update([
+            'nombre' => $request->input('nombre'),
+            'apellido' => $request->input('apellido'),
+            'correo' => $request->input('correo'),
+            'telefono' => $request->input('telefono'),
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+
+        ]);
+        session()->flash('exito', 'Se modifico el usuario: ');
+        return to_route('cliente.edit');
     }
 
     /**
@@ -77,6 +85,9 @@ class clientesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB:: table('clientes')->where('id',$id)->delete();
+        session()->flash('exito', 'Se elimino el usuario: ');
+        return to_route('formulario');
     }
+    
 }

@@ -15,8 +15,12 @@
                 <p class="card-text fw-lighter"></p>
             </div>
             <div class="card-footer text-muted">
-                <a href="{{route('clientesEdit', $cliente->id)}}" class="btn btn-warning btn-sm">Actualizar</a>
-                <button type="submit" class="btn btn-danger btn-sm">{{ __('Eliminar') }}</button>
+                <a href="{{route('clientesEdit',$cliente->id)}}" class="btn btn-warning btn-sm">Actualizar</a>
+                <form action="{{route('clientesDeleate',$cliente->id)}}" method="POST" style="display:inline-block", onsubmit="return confirm('Estas apunto de eliminar a este usuario?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
             </div>
         </div>
     @endforeach

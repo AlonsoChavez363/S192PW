@@ -32,5 +32,6 @@
 
         @yield('contenido')
         @yield('cliente')
+        @yield('edit')
 </body>
 </html>
